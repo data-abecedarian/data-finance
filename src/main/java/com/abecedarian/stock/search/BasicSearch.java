@@ -35,7 +35,7 @@ public class BasicSearch {
                 String industry = stockObj.getAsJsonPrimitive("industry").getAsString();
                 String area = stockObj.getAsJsonPrimitive("area").getAsString();
 
-                String insertSql = "insert into  stock_simple_basics(code,name,industry,area) values (" + code + ",'" + name + "','" + industry + "','" + area + "')";
+                String insertSql = "insert into  stock_simple_basics(code,name,industry,area) values ('" + code + "','" + name + "','" + industry + "','" + area + "')";
                 try {
                     System.out.println(insertSql);
                     stat.executeUpdate(insertSql);
